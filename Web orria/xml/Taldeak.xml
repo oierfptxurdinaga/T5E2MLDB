@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="taldeak.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<taldeak>
+    <taldea>
+        <izena>Barcelona</izena>
+        <irudia>Barcelona.png</irudia>
+        <deskribapena>Fc Bartzelona, ofizialki 1978an sortua eta Areto Futboleko Liga Nazionaleko Lehen Mailan lehiatzen dena.</deskribapena>
+        <plantilla>https://www.lnfs.es/equipo/bar%C3%A7a/18_25/2026/plantilla</plantilla>
+        <audioa>
+            <mp3>himno_barca.mp3</mp3>
+            <ogg>himno_barca.ogg</ogg>
+        </audioa>
+    </taldea>
+    <taldea>
+        <izena>El Pozo Murcia</izena>
+        <irudia>Elpozo.png</irudia>
+        <deskribapena>El Pozo Murcia, 1989an sortua, Liga Nazionaleko Futbol Sala Lehen Mailan jokatzen du eta Espainiako talde ospetsuenetako bat da.</deskribapena>
+        <plantilla>https://www.lnfs.es/equipo/elpozo-murcia-costa-c%C3%A1lida/22/2025/plantilla</plantilla>
+        <audioa>
+            <mp3>Himno oficial ElPozo Murcia Fútbol Sala.mp3</mp3>
+            <ogg>Himno-oficial-ElPozo-Murcia-Fútbol-Sala.ogg</ogg>
+        </audioa>
+    </taldea>
+    <taldea>
+        <izena>Islas Baleares Palma Futsal</izena>
+        <irudia>Islas Baleares.png</irudia>
+        <deskribapena>Islas Baleares Palma Futsal, 1998an sortua, LNFSko Lehen Mailan parte hartzen du eta Balear Uharteetako ordezkaria da nazio mailako lehiaketan.</deskribapena>
+        <plantilla>https://www.lnfs.es/equipo/islas-baleares-palma-futsal/30/2025/plantilla</plantilla>
+        <audioa>
+            <mp3>Himno Palma Futsal.mp3</mp3>
+            <ogg>Himno-Palma-Futsal.ogg</ogg>
+        </audioa>
+    </taldea>
+    <taldea>
+        <izena>Jimbee Cartagena</izena>
+        <irudia>Jimbee Cartagena.png</irudia>
+        <deskribapena>Jimbee Cartagena, 2010ean sortua, LNFSko Lehen Mailan jokatzen du eta Espainiako hego-ekialdeko talde lehiakorra bihurtu da.</deskribapena>
+        <plantilla>https://www.lnfs.es/equipo/jimbee-cartagena-costa-c%C3%A1lida/21/2025/plantilla</plantilla>
+        <audioa>
+            <mp3>Somos Cartagena, Somos Jimbee Cartagena.mp3</mp3>
+            <ogg>Somos-Cartagena_-Somos-Jimbee-Cartagena.ogg</ogg>
+        </audioa>
+    </taldea>
+    <taldea>
+        <izena>Quesos Hidalgo Manzanares FS</izena>
+        <irudia>Manzanares.png</irudia>
+        <deskribapena>Quesos Hidalgo Manzanares FS, 2006an sortua, LNFSko Lehen Mailan jokatzen du eta Manzanares hiria kirol espiritu handiz ordezkatzen du.</deskribapena>
+        <plantilla>https://www.lnfs.es/equipo/quesos-hidalgo-manzanares-fs/9/2025/plantilla</plantilla>
+        <audioa>
+            <mp3>Los Yonkis del Tablao' - La Bombonera (videoclip).mp3</mp3>
+            <ogg>Los-Yonkis-del-Tablao_-La-Bombonera-_videoclip_.ogg</ogg>
+        </audioa>
+    </taldea>
+    <taldea>
+        <izena>ATP Ilum. Tudelano Ribera Navarra</izena>
+        <irudia>Valdepeñas.png</irudia>
+        <deskribapena>ATP Ilum. Tudelano Ribera Navarra, 2003an sortua, LNFSko Lehen Mailan jokatzen du eta Nafarroako eskualdea ordezkatzen du futbol sala nazionalean.</deskribapena>
+        <plantilla>https://www.lnfs.es/equipo/atp-tudelano-ribera-navarra/17/2025/plantilla</plantilla>
+        <audioa>
+            <mp3>Canción 20 Aniversario del Ribera Navarra Fútbol Sala.mp3</mp3>
+            <ogg>Canción-20-Aniversario-del-Ribera-Navarra-Fútbol-Sala.ogg</ogg>
+        </audioa>
+    </taldea>
+</taldeak>

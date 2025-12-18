@@ -1,0 +1,257 @@
+/* WEB-ORRI GUZTIAREN ATSEALDEAN */
+html, body {
+    background-color: #f9f4f1;
+    margin: 0;      /* Quita el margen de 8px por defecto */
+    padding: 0;
+    width: 100%;    /* Asegura que nada sea más ancho que la pantalla */
+    overflow-x: hidden; /* SEGURIDAD: Corta cualquier cosa que se salga lateralmente */
+    box-sizing: border-box; /* Fundamental para cálculos de medidas */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* HEADER-REN DAUDEN GAUZAK */
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    max-width: 100%;
+    align-self: center;
+}
+
+.Logoa {
+    width: 200px;
+}
+
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    max-width: min-content;
+    background-color: #871521;
+    border-radius: 5px;
+    padding: 0 30px;
+    font-weight: bolder;
+
+}
+
+@media (min-width: 800px) {
+    nav {
+        max-width: max-content;
+        padding: 0px;
+        border-radius: 10px;
+        transition: all 0.2s ease;
+    }
+}
+
+nav .MenuBotoia {
+    color: #f9f4f1;
+    padding: 3px 40px;
+    transform: scale(1);
+    transition: all 0.2s ease;
+    display: inline-block;
+    text-decoration: none;
+
+}
+
+nav .MenuBotoia:hover a {
+    color: #871521;
+}
+
+nav .MenuBotoia:hover {
+    background-color: #f9f4f1;
+    color: #871521;
+    transform: scale(1.10);
+}
+
+/* HASIERAN DAUDEN GAUZAK */
+.HasierakoTitulua {
+    color: #871521;
+    text-align: center;
+    font-weight: bold;
+}
+.HasieraArtikulo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.PartidarikOnena {
+    border: solid #871521;
+    text-align: center;
+    margin: 30px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.PartidarikOnenaEmaitza {
+    display: flex;
+    color: #871521;
+    gap: 10px;
+}
+
+.PartidarikOnenaEskutuak {
+    width: 100px;
+}
+
+.PartidarikOnenaUbi {
+    text-decoration: none;
+    color: #871521;
+    font-weight: bold;
+}
+
+.PartidarikOnenaBideoa {
+    width: 600px;
+    display: flex;
+    align-content: center;
+    vertical-align: middle;
+}
+
+.GaurkoBerriak {}
+
+.GaurkoBerriakBakoitza {
+    color: #871521;
+    width: 33%;
+}
+
+.talde-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(20px, 5vw, 40px);
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.article-taldeak {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+
+@media (min-width: 800px) {
+    .article-taldeak {
+        flex: 0 0 calc(33.333% - 45px);
+        margin-bottom: 0;
+    }
+
+    .Logoa {
+        width: 500px;
+    }
+
+    .eskutu-kontainer {
+        height: 200px;
+    }
+    .kontaktua{
+            gap: 20px;
+    }
+}
+
+
+.card-bisuala {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f9f4f1;
+}
+
+.card-bisuala h3{
+    font-weight: bolder;
+}
+
+.eskutu-kontainer {
+    height: 130px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.eskutu-kontainer img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+footer {
+    display: flex;
+    background-color: #871521;
+    color: #f9f4f1;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.kontaktua {
+display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    margin: 10px;
+}
+.kontaktua a{
+    text-decoration: none;
+}
+.links a.icono {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease, background-image 0.2s ease;
+}
+
+.links a.instagram {
+    background-image: url("/irudiak/Instagramgranate.png");
+    border: #f9f4f1 solid 1px;
+    border-radius: 17px;
+}
+
+.links a.youtube {
+    background-image: url("/irudiak/Youtubegranate.png");
+    border: #f9f4f1 solid 1px;
+    border-radius: 17px;
+}
+
+.links a.tiktok {
+    background-image: url("/irudiak/TiktokGranate.png");
+    border: #f9f4f1 solid 1px;
+    border-radius: 17px;
+}
+
+.links a.instagram:hover {
+    background-image: url("/irudiak/InstaCrema.png");
+    border: #871521 solid 1px;
+    border-radius: 17px;
+}
+
+.links a.youtube:hover {
+    background-image: url("/irudiak/YoutubeCrema.png");
+    border: #871521 solid 1px;
+    border-radius: 17px;
+}
+
+.links a.tiktok:hover {
+    background-image: url("/irudiak/TikTokCrema.png");
+    border: #871521 solid 1px;
+    border-radius: 17px;
+}
+
+.links{
+display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 10px;
+
+}
