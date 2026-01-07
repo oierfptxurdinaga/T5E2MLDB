@@ -1,14 +1,27 @@
 /* WEB-ORRI GUZTIAREN ATSEALDEAN */
-html, body {
+html,
+body {
     background-color: #f9f4f1;
-    margin: 0;      /* Quita el margen de 8px por defecto */
+    margin: 0;
+    /* Quita el margen de 8px por defecto */
     padding: 0;
-    width: 100%;    /* Asegura que nada sea más ancho que la pantalla */
-    overflow-x: hidden; /* SEGURIDAD: Corta cualquier cosa que se salga lateralmente */
-    box-sizing: border-box; /* Fundamental para cálculos de medidas */
+    width: 100%;
+    /* Asegura que nada sea más ancho que la pantalla */
+    overflow-x: hidden;
+    /* SEGURIDAD: Corta cualquier cosa que se salga lateralmente */
+    box-sizing: border-box;
+    /* Fundamental para cálculos de medidas */
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
+}
+
+main{
+        display: flex;
+    flex-direction: column;
 }
 
 /* HEADER-REN DAUDEN GAUZAK */
@@ -71,32 +84,74 @@ nav .MenuBotoia:hover {
 }
 
 /* HASIERAN DAUDEN GAUZAK */
+.Hasiera{
+align-self: center;
+margin-top: 30px;
+}
 .HasierakoTitulua {
     color: #871521;
     text-align: center;
     font-weight: bold;
 }
-.HasieraArtikulo{
+
+.HasieraArtikulo {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: stretch; /* Para que la tarjeta y el video midan lo mismo de alto */
+    flex-wrap: wrap;
+    width: fit-content; /* Se ajusta al ancho de sus hijos */
+    max-width: 90%;    /* Pero no deja que se salga de la pantalla */
+    margin: 20px auto;  /* Centrado horizontal con margen arriba/abajo */
+    gap: 20px;
+}
+.HasieraArtikulo > div:last-child {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
 }
 
 .PartidarikOnena {
-    border: solid #871521;
-    text-align: center;
-    margin: 30px;
+    flex: 1;
+    margin: 10px;
+    border: solid 2px #871521;
     border-radius: 10px;
     padding: 15px;
+    
+    /* AÑADE ESTO PARA CENTRAR LO DE DENTRO */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+        height: fit-content;
+        align-self: center;
+        padding-bottom: 40px;
 }
 
 .PartidarikOnenaEmaitza {
     display: flex;
+    align-items: center;      /* Centra verticalmente escudos y números */
+    justify-content: center;   /* Centra todo el bloque horizontalmente */
     color: #871521;
-    gap: 10px;
+    gap: 15px;                 /* Espacio uniforme entre escudos y puntos */
+    margin: 10px 0;            /* Separación con lo de arriba y abajo */
+    width: fit-content;
+}
+.PartidarikOnenaEmaitza p {
+    font-size: 2.5rem;         /* Marcador más grande y visible */
+    font-weight: 900;          /* Mucho más negrita */
+    margin: 0;                 /* ELIMINA el margen que corta el texto */
+    line-height: 1;            /* Evita que el "aire" arriba/abajo corte la letra */
+    white-space: nowrap;       /* Evita que el "-" se baje a otra línea */
+}
+.PartidarikOnenaEmaitza a{
+    margin: 15px;
 }
 
 .PartidarikOnenaEskutuak {
-    width: 100px;
+    width: 80px;               /* Un poco más pequeños para dejar aire al texto */
+    height: auto;
+    object-fit: contain;
 }
 
 .PartidarikOnenaUbi {
@@ -106,10 +161,11 @@ nav .MenuBotoia:hover {
 }
 
 .PartidarikOnenaBideoa {
-    width: 600px;
-    display: flex;
-    align-content: center;
-    vertical-align: middle;
+    width: 100%;             /* Obliga al vídeo a adaptarse al ancho del móvil */
+    max-width: 800px;        /* Evita que en PC sea demasiado grande */
+    height: auto;            /* Mantiene la proporción */
+    border-radius: 8px;
+    display: block;          /* Elimina espacios fantasma debajo del vídeo */
 }
 
 .GaurkoBerriak {}
@@ -150,8 +206,28 @@ nav .MenuBotoia:hover {
     .eskutu-kontainer {
         height: 200px;
     }
-    .kontaktua{
-            gap: 20px;
+
+    .kontaktua {
+        gap: 20px;
+    }
+
+    .HasieraArtikulo {
+        max-width: 95%;
+        width: 100%;
+        /* Tu objetivo del 70% en pantallas grandes */
+        flex-wrap: nowrap;
+        /* En escritorio, uno al lado del otro */
+        width: fit-content;
+    }
+    .GaurkoBerriakBakoitza {
+        width: 100% !important; /* Ocupa todo el ancho en móvil */
+        margin: 10px 0;         /* Espacio entre noticias */
+    }
+    .PartidarikOnenaEskutuak {
+        width: 100px;
+    }
+    .PartidarikOnenaEmaitza p {
+        font-size: 3.5rem;     /* Más grande aún en escritorio */
     }
 }
 
@@ -164,7 +240,7 @@ nav .MenuBotoia:hover {
     background-color: #f9f4f1;
 }
 
-.card-bisuala h3{
+.card-bisuala h3 {
     font-weight: bolder;
 }
 
@@ -193,16 +269,18 @@ footer {
 }
 
 .kontaktua {
-display: flex;
+    display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 5px;
     justify-content: center;
     margin: 10px;
 }
-.kontaktua a{
+
+.kontaktua a {
     text-decoration: none;
 }
+
 .links a.icono {
     display: inline-block;
     width: 50px;
@@ -248,8 +326,8 @@ display: flex;
     border-radius: 17px;
 }
 
-.links{
-display: flex;
+.links {
+    display: flex;
     align-items: center;
     gap: 12px;
     margin: 10px;
