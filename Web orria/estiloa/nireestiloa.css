@@ -316,7 +316,6 @@ footer {
 }
 
 .berriakBakoitza { 
-    width: 28%;
     margin: 15px 5px;
     padding: 10px;
 }
@@ -373,6 +372,9 @@ footer {
     .partidarikOnena {
         margin: 10px;
         padding: 15px 15px 40px 15px;
+    }
+    .berriakBakoitza { 
+    width: 28%;
     }
 
     .links a.icono {
