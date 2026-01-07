@@ -1,19 +1,19 @@
 $(document).ready(function () {
-    // Hasierako karga
-    $("main").load("Hasiera.html");
+    // hasierako karga
+    $("main").load("hasiera.html");
 
     // Klik logoan
     $("#hasieraLogo").on("click", function (e) {
         e.preventDefault();
-        $("main").load("Hasiera.html");
-        document.title = "FNFS - Hasiera";
+        $("main").load("hasiera.html");
+        document.title = "FNFS - hasiera";
     });
 
-    // Klik "Hasiera" estekan
+    // Klik "hasiera" estekan
     $("#hasieraNav").on("click", function (e) {
         e.preventDefault();
-        $("main").load("Hasiera.html");
-        document.title = "FNFS - Hasiera";
+        $("main").load("hasiera.html");
+        document.title = "FNFS - hasiera";
     });
 
     // Taldeak
@@ -21,12 +21,12 @@ $(document).ready(function () {
         document.title = "FNFS - Taldeak"
         $.ajax({
             type: "GET",
-            url: "xml/Taldeak.xml",
+            url: "xml/taldeak.xml",
             dataType: "xml",
             success: function (xml) {
                 $.ajax({
                     type: "GET",
-                    url: "xml/Taldeak.xsl",
+                    url: "xml/taldeak.xsl",
                     dataType: "xml",
                     success: function (xsl) {
                         var xsltProcessor = new XSLTProcessor();
@@ -51,12 +51,12 @@ $(document).ready(function () {
         document.title = "FNFS - Berriak"
         $.ajax({
             type: "GET",
-            url: "xml/Berriak.xml",
+            url: "xml/berriak.xml",
             dataType: "xml",
             success: function (xml) {
                 $.ajax({
                     type: "GET",
-                    url: "xml/Berriak.xsl",
+                    url: "xml/berriak.xsl",
                     dataType: "xml",
                     success: function (xsl) {
                         var xsltProcessor = new XSLTProcessor();

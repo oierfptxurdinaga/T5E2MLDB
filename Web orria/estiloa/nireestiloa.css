@@ -37,7 +37,7 @@ header {
     align-self: center;
 }
 
-.Logoa {
+.logoa {
     width: 200px;
 }
 
@@ -63,7 +63,7 @@ nav {
     }
 }
 
-nav .MenuBotoia {
+nav .menuBotoia {
     color: #f9f4f1;
     padding: 3px 40px;
     transform: scale(1);
@@ -73,28 +73,28 @@ nav .MenuBotoia {
 
 }
 
-nav .MenuBotoia:hover a {
+nav .menuBotoia:hover a {
     color: #871521;
 }
 
-nav .MenuBotoia:hover {
+nav .menuBotoia:hover {
     background-color: #f9f4f1;
     color: #871521;
     transform: scale(1.10);
 }
 
 /* HASIERAN DAUDEN GAUZAK */
-.Hasiera{
+.hasiera{
 align-self: center;
 margin-top: 30px;
 }
-.HasierakoTitulua {
+.hasierakoTitulua {
     color: #871521;
     text-align: center;
     font-weight: bold;
 }
 
-.HasieraArtikulo {
+.hasieraArtikulo {
     display: flex;
     justify-content: center;
     align-items: stretch; /* Para que la tarjeta y el video midan lo mismo de alto */
@@ -104,13 +104,13 @@ margin-top: 30px;
     margin: 20px auto;  /* Centrado horizontal con margen arriba/abajo */
     gap: 20px;
 }
-.HasieraArtikulo > div:last-child {
+.hasieraArtikulo > div:last-child {
     width: 100%; 
     display: flex;
     justify-content: center;
 }
 
-.PartidarikOnena {
+.partidarikOnena {
     flex: 1;
     margin: 10px;
     border: solid 2px #871521;
@@ -128,7 +128,7 @@ margin-top: 30px;
         padding-bottom: 40px;
 }
 
-.PartidarikOnenaEmaitza {
+.partidarikOnenaEmaitza {
     display: flex;
     align-items: center;      /* Centra verticalmente escudos y números */
     justify-content: center;   /* Centra todo el bloque horizontalmente */
@@ -137,30 +137,30 @@ margin-top: 30px;
     margin: 10px 0;            /* Separación con lo de arriba y abajo */
     width: fit-content;
 }
-.PartidarikOnenaEmaitza p {
+.partidarikOnenaEmaitza p {
     font-size: 2.5rem;         /* Marcador más grande y visible */
     font-weight: 900;          /* Mucho más negrita */
     margin: 0;                 /* ELIMINA el margen que corta el texto */
     line-height: 1;            /* Evita que el "aire" arriba/abajo corte la letra */
     white-space: nowrap;       /* Evita que el "-" se baje a otra línea */
 }
-.PartidarikOnenaEmaitza a{
+.partidarikOnenaEmaitza a{
     margin: 15px;
 }
 
-.PartidarikOnenaEskutuak {
+.partidarikOnenaEskutuak {
     width: 80px;               /* Un poco más pequeños para dejar aire al texto */
     height: auto;
     object-fit: contain;
 }
 
-.PartidarikOnenaUbi {
+.partidarikOnenaUbi {
     text-decoration: none;
     color: #871521;
     font-weight: bold;
 }
 
-.PartidarikOnenaBideoa {
+.partidarikOnenaBideoa {
     width: 100%;             /* Obliga al vídeo a adaptarse al ancho del móvil */
     max-width: 800px;        /* Evita que en PC sea demasiado grande */
     height: auto;            /* Mantiene la proporción */
@@ -168,9 +168,7 @@ margin-top: 30px;
     display: block;          /* Elimina espacios fantasma debajo del vídeo */
 }
 
-.GaurkoBerriak {}
-
-.GaurkoBerriakBakoitza {
+.gaurkoBerriakBakoitza {
     color: #871521;
     width: 33%;
 }
@@ -199,7 +197,7 @@ margin-top: 30px;
         margin-bottom: 0;
     }
 
-    .Logoa {
+    .logoa {
         width: 500px;
     }
 
@@ -211,7 +209,7 @@ margin-top: 30px;
         gap: 20px;
     }
 
-    .HasieraArtikulo {
+    .hasieraArtikulo {
         max-width: 95%;
         width: 100%;
         /* Tu objetivo del 70% en pantallas grandes */
@@ -219,14 +217,14 @@ margin-top: 30px;
         /* En escritorio, uno al lado del otro */
         width: fit-content;
     }
-    .GaurkoBerriakBakoitza {
+    .gaurkoBerriakBakoitza {
         width: 100% !important; /* Ocupa todo el ancho en móvil */
         margin: 10px 0;         /* Espacio entre noticias */
     }
-    .PartidarikOnenaEskutuak {
+    .partidarikOnenaEskutuak {
         width: 100px;
     }
-    .PartidarikOnenaEmaitza p {
+    .partidarikOnenaEmaitza p {
         font-size: 3.5rem;     /* Más grande aún en escritorio */
     }
 }
