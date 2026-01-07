@@ -3,14 +3,11 @@ html,
 body {
     background-color: #f9f4f1;
     margin: 0;
-    /* Quita el margen de 8px por defecto */
     padding: 0;
     width: 100%;
-    /* Asegura que nada sea más ancho que la pantalla */
     overflow-x: hidden;
-    /* SEGURIDAD: Corta cualquier cosa que se salga lateralmente */
     box-sizing: border-box;
-    /* Fundamental para cálculos de medidas */
+
 }
 
 *,
@@ -19,8 +16,8 @@ body {
     box-sizing: inherit;
 }
 
-main{
-        display: flex;
+main {
+    display: flex;
     flex-direction: column;
 }
 
@@ -38,6 +35,7 @@ header {
 }
 
 .logoa {
+    margin-top: 20px;
     width: 200px;
 }
 
@@ -54,14 +52,7 @@ nav {
 
 }
 
-@media (min-width: 800px) {
-    nav {
-        max-width: max-content;
-        padding: 0px;
-        border-radius: 10px;
-        transition: all 0.2s ease;
-    }
-}
+@media (min-width: 800px) {}
 
 nav .menuBotoia {
     color: #f9f4f1;
@@ -84,10 +75,13 @@ nav .menuBotoia:hover {
 }
 
 /* HASIERAN DAUDEN GAUZAK */
-.hasiera{
-align-self: center;
-margin-top: 30px;
+.hasiera,
+.gaurkoBerriak {
+    align-self: center;
+    margin: 15px
 }
+
+
 .hasierakoTitulua {
     color: #871521;
     text-align: center;
@@ -97,15 +91,15 @@ margin-top: 30px;
 .hasieraArtikulo {
     display: flex;
     justify-content: center;
-    align-items: stretch; /* Para que la tarjeta y el video midan lo mismo de alto */
+    align-items: stretch;
     flex-wrap: wrap;
-    width: fit-content; /* Se ajusta al ancho de sus hijos */
-    max-width: 90%;    /* Pero no deja que se salga de la pantalla */
-    margin: 20px auto;  /* Centrado horizontal con margen arriba/abajo */
-    gap: 20px;
+    width: fit-content;
+    max-width: 90%;
+    margin: 20px auto;
 }
-.hasieraArtikulo > div:last-child {
-    width: 100%; 
+
+.hasieraArtikulo>div:last-child {
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -115,41 +109,40 @@ margin-top: 30px;
     margin: 10px;
     border: solid 2px #871521;
     border-radius: 10px;
-    padding: 15px;
-    
-    /* AÑADE ESTO PARA CENTRAR LO DE DENTRO */
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     text-align: center;
-        height: fit-content;
-        align-self: center;
-        padding-bottom: 40px;
+    height: fit-content;
+    align-self: center;
+    padding-bottom: 40px;
 }
 
 .partidarikOnenaEmaitza {
     display: flex;
-    align-items: center;      /* Centra verticalmente escudos y números */
-    justify-content: center;   /* Centra todo el bloque horizontalmente */
+    align-items: center;
+    justify-content: center;
     color: #871521;
-    gap: 15px;                 /* Espacio uniforme entre escudos y puntos */
-    margin: 10px 0;            /* Separación con lo de arriba y abajo */
+    gap: 15px;
+    margin: 10px 0;
     width: fit-content;
 }
+
 .partidarikOnenaEmaitza p {
-    font-size: 2.5rem;         /* Marcador más grande y visible */
-    font-weight: 900;          /* Mucho más negrita */
-    margin: 0;                 /* ELIMINA el margen que corta el texto */
-    line-height: 1;            /* Evita que el "aire" arriba/abajo corte la letra */
-    white-space: nowrap;       /* Evita que el "-" se baje a otra línea */
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin: 0;
+    line-height: 1;
+    white-space: nowrap;
 }
-.partidarikOnenaEmaitza a{
+
+.partidarikOnenaEmaitza a {
     margin: 15px;
 }
 
 .partidarikOnenaEskutuak {
-    width: 80px;               /* Un poco más pequeños para dejar aire al texto */
+    width: 80px;
     height: auto;
     object-fit: contain;
 }
@@ -161,16 +154,25 @@ margin-top: 30px;
 }
 
 .partidarikOnenaBideoa {
-    width: 100%;             /* Obliga al vídeo a adaptarse al ancho del móvil */
-    max-width: 800px;        /* Evita que en PC sea demasiado grande */
-    height: auto;            /* Mantiene la proporción */
+    width: 100%;
+    max-width: 800px;
+    height: auto;
     border-radius: 8px;
-    display: block;          /* Elimina espacios fantasma debajo del vídeo */
+    display: block;
+}
+
+.gaurkoBerriak {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .gaurkoBerriakBakoitza {
     color: #871521;
-    width: 33%;
+    width: 100%;
+    margin: 0;
 }
 
 .talde-flex {
@@ -191,43 +193,7 @@ margin-top: 30px;
 }
 
 
-@media (min-width: 800px) {
-    .article-taldeak {
-        flex: 0 0 calc(33.333% - 45px);
-        margin-bottom: 0;
-    }
 
-    .logoa {
-        width: 500px;
-    }
-
-    .eskutu-kontainer {
-        height: 200px;
-    }
-
-    .kontaktua {
-        gap: 20px;
-    }
-
-    .hasieraArtikulo {
-        max-width: 95%;
-        width: 100%;
-        /* Tu objetivo del 70% en pantallas grandes */
-        flex-wrap: nowrap;
-        /* En escritorio, uno al lado del otro */
-        width: fit-content;
-    }
-    .gaurkoBerriakBakoitza {
-        width: 100% !important; /* Ocupa todo el ancho en móvil */
-        margin: 10px 0;         /* Espacio entre noticias */
-    }
-    .partidarikOnenaEskutuak {
-        width: 100px;
-    }
-    .partidarikOnenaEmaitza p {
-        font-size: 3.5rem;     /* Más grande aún en escritorio */
-    }
-}
 
 
 .card-bisuala {
@@ -262,7 +228,7 @@ footer {
     display: flex;
     background-color: #871521;
     color: #f9f4f1;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -289,37 +255,37 @@ footer {
 }
 
 .links a.instagram {
-    background-image: url("/irudiak/Instagramgranate.png");
-    border: #f9f4f1 solid 1px;
+    background-image: url("../irudiak/InstaCrema.png");
+    border: #871521 solid 1px;
     border-radius: 17px;
 }
 
 .links a.youtube {
-    background-image: url("/irudiak/Youtubegranate.png");
-    border: #f9f4f1 solid 1px;
+    background-image: url("../irudiak/YoutubeCrema.png");
+    border: #871521 solid 1px;
     border-radius: 17px;
 }
 
 .links a.tiktok {
-    background-image: url("/irudiak/TiktokGranate.png");
-    border: #f9f4f1 solid 1px;
+    background-image: url("../irudiak/TikTokCrema.png");
+    border: #871521 solid 1px;
     border-radius: 17px;
 }
 
 .links a.instagram:hover {
-    background-image: url("/irudiak/InstaCrema.png");
+    background-image: url("../irudiak/InstaCrema.png");
     border: #871521 solid 1px;
     border-radius: 17px;
 }
 
 .links a.youtube:hover {
-    background-image: url("/irudiak/YoutubeCrema.png");
+    background-image: url("../irudiak/YoutubeCrema.png");
     border: #871521 solid 1px;
     border-radius: 17px;
 }
 
 .links a.tiktok:hover {
-    background-image: url("/irudiak/TikTokCrema.png");
+    background-image: url("../irudiak/TikTokCrema.png");
     border: #871521 solid 1px;
     border-radius: 17px;
 }
@@ -330,4 +296,97 @@ footer {
     gap: 12px;
     margin: 10px;
 
+}
+
+@media (min-width: 800px) {
+    nav {
+        max-width: max-content;
+        padding: 0px;
+        border-radius: 10px;
+        transition: all 0.2s ease;
+    }
+
+    .article-taldeak {
+        flex: 0 0 calc(33.333% - 45px);
+        margin-bottom: 0;
+    }
+
+    .logoa {
+        width: 500px;
+
+    }
+
+    .eskutu-kontainer {
+        height: 200px;
+    }
+
+    .kontaktua {
+        gap: 20px;
+    }
+
+    .hasieraArtikulo {
+        max-width: 95%;
+        width: 100%;
+        flex-wrap: nowrap;
+        width: fit-content;
+        gap: 20px;
+    }
+
+    .gaurkoBerriakMultzoa {
+        display: flex;
+        max-width: 1238.400px;
+        gap: 10px;
+    }
+
+    .partidarikOnenaEskutuak {
+        width: 100px;
+    }
+
+    .partidarikOnenaEmaitza p {
+        font-size: 3.5rem;
+    }
+
+    .partidarikOnena {
+        margin: 10px;
+        padding: 15px 15px 40px 15px;
+    }
+
+    .links a.icono {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease, background-image 0.2s ease;
+    }
+
+    .links a.instagram {
+        background-image: url("../irudiak/Instagramgranate.png");
+        border: #f9f4f1 solid 1px;
+        border-radius: 17px;
+    }
+
+    .links a.youtube {
+        background-image: url("../irudiak/Youtubegranate.png");
+        border: #f9f4f1 solid 1px;
+        border-radius: 17px;
+    }
+
+    .links a.tiktok {
+        background-image: url("../irudiak/TiktokGranate.png");
+        border: #f9f4f1 solid 1px;
+        border-radius: 17px;
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 10px;
+        padding: 5px;
+    }
+
+    footer {
+        justify-content: space-between;
+    }
 }

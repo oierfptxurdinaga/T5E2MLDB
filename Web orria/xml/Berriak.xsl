@@ -4,7 +4,7 @@
     <xsl:template match="/">
         <section class="w3-container w3-center">
             <xsl:for-each select="berriak/berria">
-                <article class="w3-container w3-row w3-round-large w3-card-4 w3-padding-16 w3-margin">
+                <article class="w3-container w3-row w3-round-large w3-card-4 w3-padding-16" style="margin:15px 0px">
                     <a href="{esteka}" target="_blank">
                         <img class="w3-image" src="irudiak/berriak/{irudia}" alt="Berriaren irudia"/>
                     </a>
