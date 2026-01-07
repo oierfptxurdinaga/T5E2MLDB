@@ -298,6 +298,18 @@ footer {
 
 }
 
+.berriakMultzoa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.berriakBakoitza { 
+    width: 28%;
+    margin: 15px 5px;
+    padding: 10px;
+}
+
 @media (min-width: 800px) {
     nav {
         max-width: max-content;
@@ -336,6 +348,7 @@ footer {
         display: flex;
         max-width: 1238.400px;
         gap: 10px;
+        text-align: center;
     }
 
     .partidarikOnenaEskutuak {
@@ -389,4 +402,5 @@ footer {
     footer {
         justify-content: space-between;
     }
+
 }

@@ -2,9 +2,9 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="html" encoding="UTF-8" indent="yes" />
     <xsl:template match="/">
-        <section class="w3-container w3-center">
+        <section class="w3-container w3-center berriakMultzoa">
             <xsl:for-each select="berriak/berria">
-                <article class="w3-container w3-row w3-round-large w3-card-4 w3-padding-16" style="margin:15px 0px">
+                <article class="w3-container w3-round-large w3-card-4 berriakBakoitza">
                     <a href="{esteka}" target="_blank">
                         <img class="w3-image" src="irudiak/berriak/{irudia}" alt="Berriaren irudia"/>
                     </a>
