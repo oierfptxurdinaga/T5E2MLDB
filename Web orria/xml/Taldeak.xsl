@@ -3,12 +3,12 @@
     <xsl:output method="html" encoding="UTF-8" indent="yes" />
     <xsl:template match="/">
         
-        <section class="w3-center talde-flex">
+        <section class="w3-center taldeFlex">
             
             <xsl:for-each select="taldeak/taldea">
                 
-                <article class="article-taldeak">
-                    <div class="w3-container w3-round-large w3-card-4 w3-padding-16 card-bisuala">
+                <article class="articleTaldeak">
+                    <div class="w3-container w3-round-large w3-card-4 w3-padding-16 cardBisuala">
                         
                         <h3><xsl:value-of select="izena"/></h3>
                         
@@ -20,8 +20,8 @@
                             <p><xsl:value-of select="deskribapena"/></p>
                         </div>
                         
-                        <div class="acciones">
-                            <a href="{plantilla}" class="taldea w3-button w3-black w3-round" target="_blank" style="margin-bottom: 15px; display:inline-block;">PLANTILLA</a>
+                        <div class="akzioak">
+                            <a href="{plantilla}" class="taldeaBotoia w3-button w3-round" target="_blank" style="margin-bottom: 15px; display:inline-block;">PLANTILLA</a>
                             
                             <audio controls="controls" style="width: 100%">
                                 <source src="audioak/{audioa/mp3}" type="audio/mpeg"/>

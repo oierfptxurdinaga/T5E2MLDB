@@ -175,7 +175,7 @@ nav .menuBotoia:hover {
     margin: 0;
 }
 
-.talde-flex {
+.taldeFlex {
     display: flex;
     flex-wrap: wrap;
     gap: clamp(20px, 5vw, 40px);
@@ -185,7 +185,7 @@ nav .menuBotoia:hover {
     width: 100%;
 }
 
-.article-taldeak {
+.articleTaldeak {
     flex: 0 0 100%;
     box-sizing: border-box;
     margin: 0;
@@ -193,19 +193,30 @@ nav .menuBotoia:hover {
 }
 
 
+/* Audioko kontrolen kolorea */
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+    background-color: #f9f4f1;
+}
 
 
-
-.card-bisuala {
+.cardBisuala {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: #f9f4f1;
+    
+
 }
 
-.card-bisuala h3 {
+.cardBisuala h3 {
     font-weight: bolder;
+        color: #871521;
+}
+.taldeaBotoia{
+    background-color: #871521;
+    color: #f9f4f1;
 }
 
 .eskutu-kontainer {
@@ -318,7 +329,7 @@ footer {
         transition: all 0.2s ease;
     }
 
-    .article-taldeak {
+    .articleTaldeak {
         flex: 0 0 calc(33.333% - 45px);
         margin-bottom: 0;
     }
