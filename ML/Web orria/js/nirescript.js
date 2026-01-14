@@ -76,4 +76,64 @@ $(document).ready(function () {
         });
     });
 
+    // Jardunaldi
+    $("#jornada").on("click", function () {
+        document.title = "FNFS - Jardunaldi"
+        $.ajax({
+            type: "GET",
+            url: "xml/jardunaldia.xml",
+            dataType: "xml",
+            success: function (xml) {
+                $.ajax({
+                    type: "GET",
+                    url: "xml/jardunaldia.xsl",
+                    dataType: "xml",
+                    success: function (xsl) {
+                        var xsltProcessor = new XSLTProcessor();
+                        xsltProcessor.importStylesheet(xsl);
+                        var resultDocument = xsltProcessor.transformToDocument(xml);
+                        var resultHtml = new XMLSerializer().serializeToString(resultDocument);
+                        $("main").html(resultHtml);
+                    },
+                    error: function () {
+                        console.log("Error loading XSL");
+                    }
+                });
+            },
+            error: function () {
+                console.log("Error loading XML");
+            }
+        });
+    });
+
+    // Sailkapena
+    $("#sailkapena").on("click", function () {
+        document.title = "FNFS - Sailkapena"
+        $.ajax({
+            type: "GET",
+            url: "xml/sailkapena.xml",
+            dataType: "xml",
+            success: function (xml) {
+                $.ajax({
+                    type: "GET",
+                    url: "xml/sailkapena.xsl",
+                    dataType: "xml",
+                    success: function (xsl) {
+                        var xsltProcessor = new XSLTProcessor();
+                        xsltProcessor.importStylesheet(xsl);
+                        var resultDocument = xsltProcessor.transformToDocument(xml);
+                        var resultHtml = new XMLSerializer().serializeToString(resultDocument);
+                        $("main").html(resultHtml);
+                    },
+                    error: function () {
+                        console.log("Error loading XSL");
+                    }
+                });
+            },
+            error: function () {
+                console.log("Error loading XML");
+            }
+        });
+    });
+
 });

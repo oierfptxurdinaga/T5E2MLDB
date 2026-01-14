@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="sailkapena.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<taldeak>
+    <taldea>
+        <izena>aaa</izena>
+        <irudia>Elpozo.png</irudia>
+        <ligako_puntuak>20</ligako_puntuak>
+        <aldeko_golak>10</aldeko_golak>
+        <kontrako_golak>5</kontrako_golak>
+    </taldea>
+    <taldea>
+        <izena>aaa</izena>
+        <irudia>Elpozo.png</irudia>
+        <ligako_puntuak>4</ligako_puntuak>
+        <aldeko_golak>10</aldeko_golak>
+        <kontrako_golak>5</kontrako_golak>
+    </taldea>
+    <taldea>
+        <izena>aaa</izena>
+        <irudia>Elpozo.png</irudia>
+        <ligako_puntuak>2</ligako_puntuak>
+        <aldeko_golak>10</aldeko_golak>
+        <kontrako_golak>5</kontrako_golak>
+    </taldea>
+    <taldea>
+        <izena>aaa</izena>
+        <irudia>Elpozo.png</irudia>
+        <ligako_puntuak>12</ligako_puntuak>
+        <aldeko_golak>11</aldeko_golak>
+        <kontrako_golak>5</kontrako_golak>
+    </taldea>
+    <taldea>
+        <izena>aaa</izena>
+        <irudia>Elpozo.png</irudia>
+        <ligako_puntuak>12</ligako_puntuak>
+        <aldeko_golak>10</aldeko_golak>
+        <kontrako_golak>5</kontrako_golak>
+    </taldea>
+    <taldea>
+        <izena>aaa</izena>
+        <irudia>Elpozo.png</irudia>
+        <ligako_puntuak>34</ligako_puntuak>
+        <aldeko_golak>10</aldeko_golak>
+        <kontrako_golak>5</kontrako_golak>
+    </taldea>
+</taldeak>
+
