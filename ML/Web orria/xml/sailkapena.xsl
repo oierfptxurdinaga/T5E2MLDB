@@ -8,7 +8,7 @@
                 <table class="sailkapenaTabla">
                     <thead>
                         <th>Posisioa</th>
-                        <th class="sailkapen_talde">Taldea</th>
+                        <th>Taldea</th>
                         <th>Puntuak</th>
                         <th>Aldelko Golak</th>
                         <th>Kontrako Golak</th>
@@ -27,8 +27,8 @@
                                 <td class="posisioa">
                                     <h1><xsl:value-of select="position()"/>.</h1>
                                 </td>
-                                <td class="sailkapen_talde">
-                                    <img class="w3-image" src="irudiak/eskutua/{irudia}" alt="Eskutua" />
+                                <td class="w3-container sailkapen_talde">
+                                    <img src="irudiak/eskutua/{irudia}" alt="Eskutua" />
                                     <xsl:value-of select="izena" />
                                 </td>
                                 <td>
