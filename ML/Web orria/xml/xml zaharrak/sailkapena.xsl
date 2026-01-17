@@ -7,8 +7,8 @@
             <h2>Sailkapena</h2>
 
             <div class="w3-container w3-padding">
-                <label for="temporada-selector">Aukeratu Denboraldia: </label>
-                <select id="temporada-selector" class="w3-select w3-border">
+                <label for="denboraldi-selector">Aukeratu Denboraldia: </label>
+                <select id="denboraldi-selector" class="w3-select w3-border">
                     <xsl:for-each select="denboraldiak/denboraldi">
                         <xsl:sort select="@id" data-type="number" order="ascending"/>
                         <option value="temp-{@id}">
@@ -20,7 +20,7 @@
 
             <article>
                 <xsl:for-each select="denboraldiak/denboraldi">
-                    <div id="temp-{@id}" class="tabla-temporada" style="display:none;">
+                    <div id="temp-{@id}" class="denboraldi-taula" style="display:none;">
 
                         <table class="sailkapenaTabla w3-table-all">
                             <thead>

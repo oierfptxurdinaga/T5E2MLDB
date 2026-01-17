@@ -1,161 +1,84 @@
 $(document).ready(function () {
-    // hasierako karga
+
+    // --- Kode berdina ez deitzeko 4 aldiz---
+    function kargatuXML(xmlPath, xslPath, callback) {
+        $.ajax({
+            type: "GET",
+            url: xmlPath,
+            dataType: "xml",
+            success: function (xml) {
+                $.ajax({
+                    type: "GET",
+                    url: xslPath,
+                    dataType: "xml",
+                    success: function (xsl) {
+                        try {
+                            var xsltProcessor = new XSLTProcessor();
+                            xsltProcessor.importStylesheet(xsl);
+                            var resultDocument = xsltProcessor.transformToDocument(xml);
+                            var resultHtml = new XMLSerializer().serializeToString(resultDocument);
+
+                            $("main").html(resultHtml);
+                            if (callback) callback();
+
+                        } catch (e) {
+                            console.error("Errorea XSLT transformazioan:", e);
+                            $("main").html("<p>Errorea datuak kargatzean.</p>");
+                        }
+                    },
+                    error: function () { console.log("Error loading XSL: " + xslPath); }
+                });
+            },
+            error: function () { console.log("Error loading XML: " + xmlPath); }
+        });
+    }
+
     $("main").load("hasiera.html");
 
-    // Klik logoan
-    $("#hasieraLogo").on("click", function (e) {
+    $("#hasieraLogo, #hasieraNav").on("click", function (e) {
         e.preventDefault();
         $("main").load("hasiera.html");
-        document.title = "FNFS - hasiera";
-    });
-
-    // Klik "hasiera" estekan
-    $("#hasieraNav").on("click", function (e) {
-        e.preventDefault();
-        $("main").load("hasiera.html");
-        document.title = "FNFS - hasiera";
+        document.title = "FNFS - Hasiera";
     });
 
     // Taldeak
     $("#taldeak").on("click", function () {
-        document.title = "FNFS - Taldeak"
-        $.ajax({
-            type: "GET",
-            url: "xml/taldeak.xml",
-            dataType: "xml",
-            success: function (xml) {
-                $.ajax({
-                    type: "GET",
-                    url: "xml/taldeak.xsl",
-                    dataType: "xml",
-                    success: function (xsl) {
-                        var xsltProcessor = new XSLTProcessor();
-                        xsltProcessor.importStylesheet(xsl);
-                        var resultDocument = xsltProcessor.transformToDocument(xml);
-                        var resultHtml = new XMLSerializer().serializeToString(resultDocument);
-                        $("main").html(resultHtml);
-                    },
-                    error: function () {
-                        console.log("Error loading XSL");
-                    }
-                });
-            },
-            error: function () {
-                console.log("Error loading XML");
-            }
-        });
+        document.title = "FNFS - Taldeak";
+        kargatuXML("xml/federazioa.xml", "xml/taldeak.xsl"); 
+   
     });
 
     // Berriak
     $("#berriak").on("click", function () {
-        document.title = "FNFS - Berriak"
-        $.ajax({
-            type: "GET",
-            url: "xml/berriak.xml",
-            dataType: "xml",
-            success: function (xml) {
-                $.ajax({
-                    type: "GET",
-                    url: "xml/berriak.xsl",
-                    dataType: "xml",
-                    success: function (xsl) {
-                        var xsltProcessor = new XSLTProcessor();
-                        xsltProcessor.importStylesheet(xsl);
-                        var resultDocument = xsltProcessor.transformToDocument(xml);
-                        var resultHtml = new XMLSerializer().serializeToString(resultDocument);
-                        $("main").html(resultHtml);
-                    },
-                    error: function () {
-                        console.log("Error loading XSL");
-                    }
-                });
-            },
-            error: function () {
-                console.log("Error loading XML");
-            }
-        });
+        document.title = "FNFS - Berriak";
+        kargatuXML("xml/berriak.xml", "xml/berriak.xsl");
     });
 
     // Jardunaldi
     $("#jornada").on("click", function () {
-        document.title = "FNFS - Jardunaldi"
-        $.ajax({
-            type: "GET",
-            url: "xml/jardunaldia.xml",
-            dataType: "xml",
-            success: function (xml) {
-                $.ajax({
-                    type: "GET",
-                    url: "xml/jardunaldia.xsl",
-                    dataType: "xml",
-                    success: function (xsl) {
-                        var xsltProcessor = new XSLTProcessor();
-                        xsltProcessor.importStylesheet(xsl);
-                        var resultDocument = xsltProcessor.transformToDocument(xml);
-                        var resultHtml = new XMLSerializer().serializeToString(resultDocument);
-                        $("main").html(resultHtml);
-                    },
-                    error: function () {
-                        console.log("Error loading XSL");
-                    }
-                });
-            },
-            error: function () {
-                console.log("Error loading XML");
-            }
-        });
+        document.title = "FNFS - Jardunaldi";
+        kargatuXML("xml/federazioa.xml", "xml/jardunaldia.xsl");
     });
 
-    // Sailkapena
     $("#sailkapena").on("click", function () {
-        document.title = "FNFS - Sailkapena"
-        $.ajax({
-            type: "GET",
-            url: "xml/sailkapena.xml", // Asegúrate de que la ruta sea correcta
-            dataType: "xml",
-            success: function (xml) {
-                $.ajax({
-                    type: "GET",
-                    url: "xml/sailkapena.xsl", // Asegúrate de que la ruta sea correcta
-                    dataType: "xml",
-                    success: function (xsl) {
-                        var xsltProcessor = new XSLTProcessor();
-                        xsltProcessor.importStylesheet(xsl);
-                        var resultDocument = xsltProcessor.transformToDocument(xml);
-                        var resultHtml = new XMLSerializer().serializeToString(resultDocument);
-                        
-                        // 1. Insertar el HTML
-                        $("main").html(resultHtml);
+        document.title = "FNFS - Sailkapena";
+        kargatuXML("xml/federazioa.xml", "xml/sailkapena.xsl", function() {
 
-                        // --- LÓGICA DEL SELECTOR ---
-                        
-                        // A. Mostrar la temporada seleccionada actualmente (la primera del select)
-                        var selectedId = $("#temporada-selector").val();
-                        $("#" + selectedId).show();
+            $(".denborald-taula").hide();
 
-                        // B. Evento cuando el usuario cambia el select
-                        $("#temporada-selector").on("change", function() {
-                            // 1. Ocultar todas las tablas con la clase 'tabla-temporada'
-                            $(".tabla-temporada").hide();
-                            
-                            // 2. Obtener el ID seleccionado (ej: "temp-2")
-                            var idVisible = $(this).val();
-                            
-                            // 3. Mostrar solo esa
-                            $("#" + idVisible).fadeIn(200); // fadeIn para un efecto suave
-                        });
-
-                    },
-                    error: function () {
-                        console.log("Error loading XSL");
-                    }
-                });
-            },
-            error: function () {
-                console.log("Error loading XML");
+            var idHasiera = $("#temporada-selector").val(); 
+            if(idHasiera) {
+                $("#" + idHasiera).show();
             }
+
+
+            $("#temporada-selector").on("change", function() {
+                var idAukeratua = $(this).val(); 
+                
+                $(".denboraldi-taula").hide();
+                $("#" + idAukeratua).fadeIn(300);
+            });
         });
     });
 
 });
-
