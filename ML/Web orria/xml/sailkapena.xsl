@@ -30,75 +30,77 @@
                         <h3 class="w3-center"><xsl:value-of select="@urtea" /> - <xsl:value-of
                                 select="@urtea + 1" /> Denboraldia</h3>
 
-                        <table class="w3-table-all w3-hoverable">
-                            <thead>
-                                <tr class="w3-light-grey">
-                                    <th>Pos</th>
-                                    <th>Taldea</th>
-                                    <th>Pt</th>
-                                    <th>J</th>
-                                    <th>I</th>
-                                    <th>B</th>
-                                    <th>G</th>
-                                    <th>AG</th>
-                                    <th>KG</th>
-                                    <th>DG</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <xsl:for-each select="Sailkapena/Lerroa">
-                                    <tr>
-                                        <td class="posizioa" style="font-weight:bold;">
-                                            <xsl:if test="Posizioa &lt;= 4">
-                                                <span style="color:green;">
-                                                    <xsl:value-of select="Posizioa" />
-                                                </span>
-                                            </xsl:if>
-                                            <xsl:if test="Posizioa > 4">
-                                                <xsl:value-of select="Posizioa" />
-                                            </xsl:if>
-                                        </td>
+                        <div class="w3-responsive">
 
-                                        <td style="display: flex; align-items: center;">
-                                            <img src="irudiak/eskutua/{Ezkutua}.png" alt=""
-                                                style="width:25px; height:25px; margin-right:10px;"
-                                                onerror="this.style.display='none'" />
-                                            <span style="font-weight:bold;">
-                                                <xsl:value-of select="Taldea" />
-                                            </span>
-                                        </td>
-
-                                        <td>
-                                            <strong>
-                                                <xsl:value-of select="Puntuak" />
-                                            </strong>
-                                        </td>
-                                        <td>
-                                            <xsl:value-of select="Jokatuak" />
-                                        </td>
-                                        <td>
-                                            <xsl:value-of select="Irabaziak" />
-                                        </td>
-                                        <td>
-                                            <xsl:value-of select="Berdinduak" />
-                                        </td>
-                                        <td>
-                                            <xsl:value-of select="Galduak" />
-                                        </td>
-                                        <td>
-                                            <xsl:value-of select="AldekoGolak" />
-                                        </td>
-                                        <td>
-                                            <xsl:value-of select="AurkakoGolak" />
-                                        </td>
-                                        <td>
-                                            <xsl:value-of select="AldekoGolak - AurkakoGolak" />
-                                        </td>
+                            <table class="w3-table-all w3-hoverable w3-small">
+                                <thead>
+                                    <tr class="w3-light-grey">
+                                        <th>Pos</th>
+                                        <th>Taldea</th>
+                                        <th>Pt</th>
+                                        <th>J</th>
+                                        <th>I</th>
+                                        <th>B</th>
+                                        <th>G</th>
+                                        <th>AG</th>
+                                        <th>KG</th>
+                                        <th>DG</th>
                                     </tr>
-                                </xsl:for-each>
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    <xsl:for-each select="Sailkapena/Lerroa">
+                                        <tr>
+                                            <td class="posizioa" style="font-weight:bold;">
+                                                <xsl:if test="Posizioa &lt;= 4">
+                                                    <span style="color:green;">
+                                                        <xsl:value-of select="Posizioa" />
+                                                    </span>
+                                                </xsl:if>
+                                                <xsl:if test="Posizioa > 4">
+                                                    <xsl:value-of select="Posizioa" />
+                                                </xsl:if>
+                                            </td>
 
+                                            <td style="display: flex; align-items: center;">
+                                                <img src="irudiak/eskutua/{Ezkutua}.png" alt=""
+                                                    style="width:25px; height:25px; margin-right:10px;"
+                                                    onerror="this.style.display='none'" />
+                                                <span style="font-weight:bold;">
+                                                    <xsl:value-of select="Taldea" />
+                                                </span>
+                                            </td>
+
+                                            <td>
+                                                <strong>
+                                                    <xsl:value-of select="Puntuak" />
+                                                </strong>
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="Jokatuak" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="Irabaziak" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="Berdinduak" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="Galduak" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="AldekoGolak" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="AurkakoGolak" />
+                                            </td>
+                                            <td>
+                                                <xsl:value-of select="AldekoGolak - AurkakoGolak" />
+                                            </td>
+                                        </tr>
+                                    </xsl:for-each>
+                                </tbody>
+                            </table>
+                        </div>
                         <xsl:if test="not(Sailkapena/Lerroa)">
                             <p class="w3-center w3-text-grey">Sailkapena ez dago erabilgarri
         denboraldi honetan.</p>
