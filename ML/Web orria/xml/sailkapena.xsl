@@ -4,28 +4,23 @@
 
     <xsl:template match="/">
         <div class="w3-container w3-center w3-padding-32">
-            <h2
-                style="color: #871521; font-weight:bold; text-transform:uppercase; letter-spacing:2px; text-shadow: 1px 1px 0 #ddd;">
-        Sailkapena
+            <h2 style="color: #871521; font-weight:bold; text-transform:uppercase; letter-spacing:2px; text-shadow: 1px 1px 0 #ddd;">
+                Sailkapena
             </h2>
             <div class="w3-center">
-                <span
-                    style="display:inline-block; width: 80px; height: 4px; background-color: #871521; border-radius: 2px;"></span>
+                <span style="display:inline-block; width: 80px; height: 4px; background-color: #871521; border-radius: 2px;"></span>
             </div>
         </div>
-        <section
-            class="w3-card-4 w3-container w3-round-large Sailkapena"
+        <section class="w3-card-4 w3-container w3-round-large Sailkapena"
             style="margin: 20px auto; padding: 20px; background-color: white; max-width: 1200px;">
 
             <div class="w3-container w3-padding w3-center">
-                <label for="temporada-selector" style="font-weight:bold; margin-right:10px;">Aukeratu
-        Denboraldia: </label>
+                <label for="temporada-selector" style="font-weight:bold; margin-right:10px;">Aukeratu Denboraldia: </label>
                 <select id="temporada-selector" class="w3-select w3-border"
                     style="width: 200px; display:inline-block;">
                     <xsl:for-each select="//Denboraldia">
                         <xsl:sort select="@urtea" data-type="number" order="descending" />
-                        <option
-                            value="temp-{@urtea}">
+                        <option value="temp-{@urtea}">
                             <xsl:value-of select="@urtea" />/<xsl:value-of select="@urtea + 1" />
                         </option>
                     </xsl:for-each>
@@ -37,8 +32,7 @@
                     <div id="temp-{@urtea}" class="tabla-temporada"
                         style="display:none; animation: fadeIn 0.5s;">
 
-                        <h3 class="w3-center"><xsl:value-of select="@urtea" /> - <xsl:value-of
-                                select="@urtea + 1" /> Denboraldia</h3>
+                        <h3 class="w3-center"><xsl:value-of select="@urtea" /> - <xsl:value-of select="@urtea + 1" /> Denboraldia</h3>
 
                         <div class="w3-responsive">
 
@@ -49,12 +43,13 @@
                                         <th>Taldea</th>
                                         <th>Pt</th>
                                         <th>J</th>
-                                        <th>I</th>
-                                        <th>B</th>
-                                        <th>G</th>
-                                        <th>AG</th>
-                                        <th>KG</th>
-                                        <th>DG</th>
+                                        
+                                        <th class="w3-hide-small">I</th>
+                                        <th class="w3-hide-small">B</th>
+                                        <th class="w3-hide-small">G</th>
+                                        <th class="w3-hide-small">AG</th>
+                                        <th class="w3-hide-small">KG</th>
+                                        <th class="w3-hide-small">DG</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -85,25 +80,27 @@
                                                     <xsl:value-of select="Puntuak" />
                                                 </strong>
                                             </td>
+                                            
                                             <td>
                                                 <xsl:value-of select="Jokatuak" />
                                             </td>
-                                            <td>
+                                            
+                                            <td class="w3-hide-small">
                                                 <xsl:value-of select="Irabaziak" />
                                             </td>
-                                            <td>
+                                            <td class="w3-hide-small">
                                                 <xsl:value-of select="Berdinduak" />
                                             </td>
-                                            <td>
+                                            <td class="w3-hide-small">
                                                 <xsl:value-of select="Galduak" />
                                             </td>
-                                            <td>
+                                            <td class="w3-hide-small">
                                                 <xsl:value-of select="AldekoGolak" />
                                             </td>
-                                            <td>
+                                            <td class="w3-hide-small">
                                                 <xsl:value-of select="AurkakoGolak" />
                                             </td>
-                                            <td>
+                                            <td class="w3-hide-small">
                                                 <xsl:value-of select="AldekoGolak - AurkakoGolak" />
                                             </td>
                                         </tr>
@@ -112,8 +109,7 @@
                             </table>
                         </div>
                         <xsl:if test="not(Sailkapena/Lerroa)">
-                            <p class="w3-center w3-text-grey">Sailkapena ez dago erabilgarri
-        denboraldi honetan.</p>
+                            <p class="w3-center w3-text-grey">Sailkapena ez dago erabilgarri denboraldi honetan.</p>
                         </xsl:if>
                     </div>
                 </xsl:for-each>
