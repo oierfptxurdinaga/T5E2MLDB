@@ -206,15 +206,16 @@ audio::-webkit-media-controls-panel {
     flex-direction: column;
     justify-content: space-between;
     background-color: #f9f4f1;
-    
+
 
 }
 
 .cardBisuala h3 {
     font-weight: bolder;
-        color: #871521;
+    color: #871521;
 }
-.taldeaBotoia{
+
+.taldeaBotoia {
     background-color: #871521;
     color: #f9f4f1;
 }
@@ -315,9 +316,15 @@ footer {
     justify-content: center;
 }
 
-.berriakBakoitza { 
+.berriakBakoitza {
     margin: 15px 5px;
     padding: 10px;
+}
+
+.jardunaldiakh2 {
+    color: #871521;
+    text-align: center;
+    font-weight: bold;
 }
 
 @media (min-width: 800px) {
@@ -373,8 +380,9 @@ footer {
         margin: 10px;
         padding: 15px 15px 40px 15px;
     }
-    .berriakBakoitza { 
-    width: 28%;
+
+    .berriakBakoitza {
+        width: 28%;
     }
 
     .links a.icono {
@@ -416,71 +424,71 @@ footer {
         justify-content: space-between;
     }
 }
-    .Sailkapena{
-        display: flex;
-        flex-direction: column ;
-        color: #871521;
-        width: 90%;
-        align-self: center;
-        margin: 20%;
-        margin: 2cqmax;
-    }
 
-    .Sailkapena h2{
-        font-weight: bold;
-        margin-left: 5%;
-    }
+.Sailkapena {
+    display: flex;
+    flex-direction: column;
+    color: #871521;
+    width: 90%;
+    align-self: center;
+    margin: 20%;
+    margin: 2cqmax;
+}
 
-    .Sailkapena img{
-        width: 60%;
-        margin-right: 40%;
-        max-width: 250px;
-    }
+.Sailkapena h2 {
+    font-weight: bold;
+    margin-left: 5%;
+}
 
-    .sailkapenaTabla{
-        font-size: 150%;
-        border-collapse: collapse;
-        margin-left: 5%;
-        width: 90%;
-        font-family: Arial;
-        align-self: center;
-    }
+.Sailkapena img {
+    width: 60%;
+    margin-right: 40%;
+    max-width: 250px;
+}
 
-    .sailkapenaTabla thead{
-        font-weight: bold;
-        border-bottom: #871521 solid 3px;
-        text-align: center;
-        font-size: 80%;
-        width: 100%;
-    }
+.sailkapenaTabla {
+    font-size: 150%;
+    border-collapse: collapse;
+    margin-left: 5%;
+    width: 90%;
+    font-family: Arial;
+    align-self: center;
+}
 
-    .sailkapenaTabla th{
-        width: 10%;
-    }
-    
-    .sailkapenaTabla tr{
-        border-bottom: #868283 solid 1px;
-        text-align: center;
-        justify-content: center;
-        font-size: 80%;
-    }
+.sailkapenaTabla thead {
+    font-weight: bold;
+    border-bottom: #871521 solid 3px;
+    text-align: center;
+    font-size: 80%;
+    width: 100%;
+}
 
-    .sailkapenaTabla td{
-        width: 10%;
-    }
+.sailkapenaTabla th {
+    width: 10%;
+}
 
-    .posisioa{
-        font-weight: bold;
-    }
-    .posisioa h1{
-        text-align: center;
-        width: 80%;
-    }
+.sailkapenaTabla tr {
+    border-bottom: #868283 solid 1px;
+    text-align: center;
+    justify-content: center;
+    font-size: 80%;
+}
 
-    .sailkapen_talde{
-        display: flex; 
-        flex-direction: column;
-        font-size: 80%;
-    }
+.sailkapenaTabla td {
+    width: 10%;
+}
 
-    
+.posisioa {
+    font-weight: bold;
+}
+
+.posisioa h1 {
+    text-align: center;
+    width: 80%;
+}
+
+.sailkapen_talde {
+    display: flex;
+    flex-direction: column;
+    font-size: 80%;
+}

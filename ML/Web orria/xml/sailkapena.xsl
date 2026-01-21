@@ -3,9 +3,19 @@
     <xsl:output method="html" encoding="UTF-8" indent="yes" />
 
     <xsl:template match="/">
-        <section class="w3-card-4 w3-container w3-round-large Sailkapena"
+        <div class="w3-container w3-center w3-padding-32">
+            <h2
+                style="color: #871521; font-weight:bold; text-transform:uppercase; letter-spacing:2px; text-shadow: 1px 1px 0 #ddd;">
+        Sailkapena
+            </h2>
+            <div class="w3-center">
+                <span
+                    style="display:inline-block; width: 80px; height: 4px; background-color: #871521; border-radius: 2px;"></span>
+            </div>
+        </div>
+        <section
+            class="w3-card-4 w3-container w3-round-large Sailkapena"
             style="margin: 20px auto; padding: 20px; background-color: white; max-width: 1200px;">
-            <h2 class="w3-center">Sailkapena</h2>
 
             <div class="w3-container w3-padding w3-center">
                 <label for="temporada-selector" style="font-weight:bold; margin-right:10px;">Aukeratu

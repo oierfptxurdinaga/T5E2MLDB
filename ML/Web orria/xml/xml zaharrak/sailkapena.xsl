@@ -10,9 +10,10 @@
                 <label for="denboraldi-selector">Aukeratu Denboraldia: </label>
                 <select id="denboraldi-selector" class="w3-select w3-border">
                     <xsl:for-each select="denboraldiak/denboraldi">
-                        <xsl:sort select="@id" data-type="number" order="ascending"/>
-                        <option value="temp-{@id}">
-                            <xsl:value-of select="izena"/>
+                        <xsl:sort select="@id" data-type="number" order="ascending" />
+                        <option
+                            value="temp-{@id}">
+                            <xsl:value-of select="izena" />
                         </option>
                     </xsl:for-each>
                 </select>
@@ -34,25 +35,37 @@
                             </thead>
                             <tbody>
                                 <xsl:for-each select="taldea">
-                                    <xsl:sort select="ligako_puntuak" data-type="number" order="descending"/>
-                                    <xsl:sort select="aldeko_golak - kontrako_golak" data-type="number" order="descending"/>
-                                    <xsl:sort select="aldeko_golak" data-type="number" order="descending"/>
-                                    <xsl:sort select="kontrako_golak" data-type="number" order="ascending"/>
-                                    <xsl:sort select="izena" order="ascending"/>
+                                    <xsl:sort select="ligako_puntuak" data-type="number"
+                                        order="descending" />
+                                    <xsl:sort
+                                        select="aldeko_golak - kontrako_golak" data-type="number"
+                                        order="descending" />
+                                    <xsl:sort select="aldeko_golak"
+                                        data-type="number" order="descending" />
+                                    <xsl:sort
+                                        select="kontrako_golak" data-type="number" order="ascending" />
+                                    <xsl:sort
+                                        select="izena" order="ascending" />
 
                                     <tr>
                                         <td class="posisioa">
-                                            <h1><xsl:value-of select="position()"/>.</h1>
+                                            <h1><xsl:value-of select="position()" />.</h1>
                                         </td>
                                         <td>
                                             <div class="sailkapen_talde">
-                                                <img src="irudiak/eskutua/{irudia}" alt="Eskutua"/>
+                                                <img src="irudiak/eskutua/{irudia}" alt="Eskutua" />
                                                 <xsl:value-of select="izena" />
                                             </div>
                                         </td>
-                                        <td><xsl:value-of select="ligako_puntuak"/></td>
-                                        <td><xsl:value-of select="aldeko_golak"/></td>
-                                        <td><xsl:value-of select="kontrako_golak"/></td>
+                                        <td>
+                                            <xsl:value-of select="ligako_puntuak" />
+                                        </td>
+                                        <td>
+                                            <xsl:value-of select="aldeko_golak" />
+                                        </td>
+                                        <td>
+                                            <xsl:value-of select="kontrako_golak" />
+                                        </td>
                                     </tr>
                                 </xsl:for-each>
                             </tbody>

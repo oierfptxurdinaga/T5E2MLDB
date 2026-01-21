@@ -100,7 +100,7 @@ $(document).ready(function () {
     // Menuaren botoiak
     $("#taldeak").on("click", function () {
         document.title = "FNFS - Taldeak";
-        kargatuXML("xml/taldeak.xml", "xml/taldeak.xsl");
+        kargatuXML("xml/federazioa.xml", "xml/taldeak.xsl");
     });
 
     $("#berriak").on("click", function () {
